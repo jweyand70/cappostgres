@@ -1,0 +1,40 @@
+{
+  "requires": {
+    "[pg]": {
+      "db": {
+        "kind": "postgres",
+        "impl": "@cap-js/postgres",
+        "credentials": {
+          "host": "localhost",
+          "port": 5432,
+          "user": "postgres",
+          "password": "postgres",
+          "database": "DMMDM"
+        }
+      },
+      "auth": {
+        "kind": "mocked",
+        "users": {
+          "testviewer": {
+            "password": "12345",
+            "roles": [
+              "DMMDMViewer"
+            ]
+          },
+          "testadmin": {
+            "password": "12345",
+            "roles": [
+              "DMMDMAdmin"
+            ]
+          },
+          "testnoauth": {
+            "password": "12345",
+            "roles": [
+              "DMMDMNoAuth"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

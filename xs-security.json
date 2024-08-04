@@ -1,0 +1,43 @@
+{
+  "xsappname": "dmmdmapp",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.DMMDMViewer",
+      "description": "DMMDMViewer"
+    },
+    {
+      "name": "$XSAPPNAME.DMMDMAdmin",
+      "description": "DMMDMAdmin"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "DMMDMViewer",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.DMMDMViewer"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "DMMDMAdmin",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.DMMDMAdmin"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "oauth2-configuration": {
+    "credential-types": [
+      "binding-secret",
+      "x509"
+    ],
+    "redirect-uris": [
+      "https://**cfapps.us10-001.hana.ondemand.com/login/callback*",
+      "http://localhost:5000/**"
+    ]
+  }
+}
